@@ -21,7 +21,7 @@ public class ReviewController {
 		}
 		
 		@RequestMapping("review")
-		public String getACourse(@RequestParam Long id, Model model) {
+		public String getAReview(@RequestParam Long id, Model model) {
 			model.addAttribute("reviews", reviewRepo.findOne(id));
 			return "review";
 		}
