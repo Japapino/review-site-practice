@@ -8,14 +8,17 @@
 
 <body>
 
-	<header>
-		<h1> A Review </h1>
-	</header>
-
 	<div th:each="review: ${reviews}">
+	<header>
+		<h1> <span th:text="${review.name}"></span> </h1>
+	</header>
+	
+		<img src="./images/batman.jpg" alt="i'm batman" style="height:300px; width:auto;" />
+	
+
 		<p th:text="${review.name}" />
 		<p th:text="${review.review}" />
-		<a href="http://localhost:8080/courses">Back to home</a>
+		<a href="http://localhost:8080/reviews">Back to home</a>
 	</div>
 
 </body>
