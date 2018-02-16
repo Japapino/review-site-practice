@@ -9,7 +9,7 @@ public class ReviewRepository {
 	Map<Long, Review> reviews = new HashMap<>();
 	
 	public ReviewRepository() {
-		Review batman = new Review(1L,"Batman","Batman review"); 
+		Review batman = new Review(1L,"Batma","Batman review"); 
 		Review superman = new Review(2L,"Superman","Sherlock review"); 
 		Review sherlock = new Review(3L,"Sherlock","Sherlock review");
 		
