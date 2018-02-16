@@ -19,4 +19,10 @@ public class ReviewController {
 			return "reviews";
 		}
 		
+//		@RequestMapping("review")
+//		public String getACourse(@RequestParam Long id, Model model) {
+//			model.addAttribute("reviews", reviewRepo.findOne(id));
+//			return "review";
+//		}
+		
 }
