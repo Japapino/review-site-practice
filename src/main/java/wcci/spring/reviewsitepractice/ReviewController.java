@@ -6,6 +6,7 @@ import javax.annotation.Resources;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ReviewController {
@@ -19,10 +20,10 @@ public class ReviewController {
 			return "reviews";
 		}
 		
-//		@RequestMapping("review")
-//		public String getACourse(@RequestParam Long id, Model model) {
-//			model.addAttribute("reviews", reviewRepo.findOne(id));
-//			return "review";
-//		}
+		@RequestMapping("review")
+		public String getACourse(@RequestParam Long id, Model model) {
+			model.addAttribute("reviews", reviewRepo.findOne(id));
+			return "review";
+		}
 		
 }

@@ -10,14 +10,12 @@
 	<header>
 		<h1>A List of Reviews</h1>
 	</header>
-	
-	<ul th:each="review reviews">
+	<ul th:each="review:${reviews}">
 		<li>
 			<a th:href="@{/review(id=${review.id})}" th:text="${review.name}" />
 			<span th:text="': ' + ${review.description}" />
 		</li>
 	</ul>
-
 
 </body>
 </html>
