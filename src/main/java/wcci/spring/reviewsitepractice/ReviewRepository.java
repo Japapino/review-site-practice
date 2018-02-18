@@ -23,6 +23,13 @@ public class ReviewRepository {
 		reviews.get(2L).setImage("./images/superman.png");
 		reviews.get(1L).setImage("./images/batman.jpg");
 		
+		reviews.get(1L).addTag("Action");
+		reviews.get(2L).addTag("Action");
+		reviews.get(3L).addTag("Action");
+		reviews.get(1L).addTag("Romance");
+		reviews.get(2L).addTag("Adventure");
+		reviews.get(3L).addTag("Mystery");
+		
 	}
 	public ReviewRepository(Review review) {
 		reviews.put(review.getKey(), review);
