@@ -1,25 +1,47 @@
 package wcci.spring.reviewsitepractice;
 
+import java.awt.List;
+import java.util.Collection;
+
 public class Review {
 	private long reviewId;
-	private String name; 
-	private String review; 
-	
+	private String name;
+	private String review;
+	private Collection<String> tags;
+	private String imagePath; 
+
 	public Review(long reviewId, String name, String review) {
-		this.reviewId = reviewId; 
-		this.name = name; 
-		this.review = review; 
+		this.reviewId = reviewId;
+		this.name = name;
+		this.review = review;
 	}
 
 	public Long getKey() {
 		return reviewId;
 	}
-	
+
 	public String getName() {
-		return name; 
+		return name;
 	}
 
 	public String getReview() {
-		return review; 
+		return review;
 	}
+
+	public void setImage(String imagePath) {
+		this.imagePath = imagePath;
+	}
+	
+	public String getImage() {
+		return imagePath; 
+	}
+
+	public void addTag(String tag) {
+		tags.add(tag);
+	}
+
+	public Collection<String> getTags() {
+		return tags;
+	}
+
 }

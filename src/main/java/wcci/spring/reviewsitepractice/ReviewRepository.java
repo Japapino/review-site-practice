@@ -11,13 +11,18 @@ public class ReviewRepository {
 	Map<Long, Review> reviews = new HashMap<>();
 	
 	public ReviewRepository() {
-		Review batman = new Review(1L,"Batman","Batman review"); 
+		Review batman = new Review(1L,"Batman V. Sharknado","Batman review"); 
 		Review superman = new Review(2L,"Superman","Sherlock review"); 
 		Review sherlock = new Review(3L,"Sherlock","Sherlock review");
 		
 		reviews.put(batman.getKey(), batman);
 		reviews.put(superman.getKey(), superman);
 		reviews.put(sherlock.getKey(), sherlock); 
+		
+		reviews.get(3L).setImage("./images/sherlock.jpg");
+		reviews.get(2L).setImage("./images/superman.png");
+		reviews.get(1L).setImage("./images/batman.jpg");
+		
 	}
 	public ReviewRepository(Review review) {
 		reviews.put(review.getKey(), review);
